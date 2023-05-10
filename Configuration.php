@@ -1,8 +1,10 @@
 <?php
 include_once('helpers/MySqlDatabase.php');
 include_once('model/PokemonsModel.php');
+include_once('model/LoginModel.php');
 
 include_once('controller/PokemonsController.php');
+include_once('controller/LoginController.php');
 class Configuration {
     private $configFile = 'config/config.ini';
 
@@ -28,6 +30,12 @@ class Configuration {
         $database = $this->getDatabase();
         $pokemonsModel = new PokemonsModel($database);
         return new PokemonsController($pokemonsModel);
+    }
+
+    public function getLoginController() {
+        $database = $this->getDatabase();
+        $loginModel = new LoginModel($database);
+        return new LoginController($loginModel);
     }
 
     //la clase Configuration es una clase de utilidad que se utiliza para crear instancias de las

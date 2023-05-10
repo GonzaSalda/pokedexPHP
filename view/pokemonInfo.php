@@ -30,21 +30,18 @@ include_once('../view/header.php');
 
 
         echo "
-                        <div class='flex flex-col items-center border-8 border-red-300 p-10 rounded-2xl'>
-                            <h1 class='text-2xl font-bold'>" . $pokemon['nombre'] . "</h1>
-                            <img class='lg:w-36 lg:h-32' src='../public" . $pokemon['imagen'] . "'>
+                        <div class='flex flex-col lg:flex-row items-center border-8 border-red-300 p-10 rounded-2xl'>
+                            <div> 
+                                <h1 class='text-2xl font-bold'>" . $pokemon['nombre'] . "</h1>
+                                <img class='lg:w-36 lg:h-32' src='../public" . $pokemon['imagen'] . "'>
                                 <div class='flex gap-2 font-bold'>
-                                    <div class='flex flex-col'>
-                                        <h3>" . $pokemon['tipo1'] . "</h3>
                                         <img class='max-w-full lg:w-15 lg:h-15' src='../public" . $pokemon['imagen_tipo1'] . "'>
-                                    </div>
-                                    <div class='flex flex-col'>
-                                        <h3>" . $pokemon['tipo2'] . "</h3>
                                         <img class='w-15 h-15' src='../public" . $pokemon['imagen_tipo2'] . "'>
-                                    </div>
                                 </div>
-                                <p class='text-black font-bold text-center mt-6'>" . $pokemon['descripcion'] . "</p>
-
+                            </div>
+                            <div class='max-w-xs  px-5 lg:px-0'>
+                                 <p class='text-black font-bold text-center mt-4   '>" . $pokemon['descripcion'] . "</p>  
+                            </div>      
                          </div>
                    
                   ";

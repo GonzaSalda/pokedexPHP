@@ -16,14 +16,8 @@
                             <h1 class='text-2xl font-bold'>" . $pokemon['nombre'] . "</h1>
                             <img class=' lg:w-36 lg:h-32' src='public" . $pokemon['imagen'] . "'>
                                 <div class='flex gap-2 font-bold'>
-                                    <div class='flex flex-col'>
-                                        <h3>" . $pokemon['tipo1'] . "</h3>
                                         <img class='w-15 h-15' src='public" . $pokemon['imagen_tipo1'] . "'>
-                                    </div>
-                                    <div class='flex flex-col'>
-                                        <h3>" . $pokemon['tipo2'] . "</h3>
                                         <img class='w-15 h-15' src='public" . $pokemon['imagen_tipo2'] . "'>
-                                    </div>
                                 </div>
                              <a class='font-bold text-red-300 mt-4 hover:text-red-400' href='view/pokemonInfo.php?id=" . $pokemon['id'] . "'>Ver más información</a>
                          </div>

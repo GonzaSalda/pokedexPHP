@@ -20,8 +20,10 @@ CREATE TABLE admin (
                          password VARCHAR(20)
 );
 
-INSERT INTO `pokemon` VALUES (id,1,"/Bulbasaur.jpg","Bulbasaur","Planta","/Elementos/planta.jpg","Veneno","/Elementos/veneno.jpg","Bulbasaur es un Pokémon cuadrúpedo de color verde y manchas más oscuras de formas geométricas.");
-INSERT INTO `pokemon` VALUES (id,2,"/Bulbasaur.jpg","acc","Planta","/Elementos/planta.jpg","Veneno","/Elementos/veneno.jpg","Bulbasaur es un Pokémon cuadrúpedo de color verde y manchas más oscuras de formas geométricas.");
+INSERT INTO `pokemon` VALUES (id,1,"/Bulbasaur.jpg","Bulbasaur","Grass","/Elementos/Type_Grass.jpg","Poison","/Elementos/Type_Poison.jpg","Bulbasaur es un Pokémon cuadrúpedo de color verde y manchas más oscuras de formas geométricas.");
+INSERT INTO `pokemon` VALUES (id,2,"/Charizard.jpg","Charizard","Fire","/Elementos/Type_Fire.jpg","Flying","/Elementos/Type_flying.jpg","Los Charizards están muy ansiosos por luchar. Charizard busca enemigos más fuertes y solo lanza fuego durante las batallas con oponentes dignos.");
+INSERT INTO `pokemon` VALUES (id,3,"/Butterfree.jpg","Butterfree","Bug","/Elementos/Type_Bug.jpg","Flying","/Elementos/Type_flying.jpg","Butterfree consume miel de las flores. Pueden rastrear cantidades de minutos de polen hasta los parches de flores, donde luego se dan un festín con miel y néctar.");
+INSERT INTO `pokemon` VALUES (id,4,"/Pidgeot.jpg","Pidgeot","Normal","/Elementos/Type_Normal.jpg","Flying","/Elementos/Type_flying.jpg","No atacan a otros simplemente por ingresar a sus territorios; más bien, esperan y usan su aguda vista para observar desde lejos, viendo si sus intrusos tienen malas intenciones.");
 
 
 INSERT INTO `admin` VALUES (id,"admin","admin123 ");

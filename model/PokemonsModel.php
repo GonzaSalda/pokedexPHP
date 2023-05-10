@@ -14,10 +14,9 @@ class PokemonsModel {
 
 
     public function search() {
-                $searchTerm = $_POST['searchTerm'];
-                // Sanitize the search term to prevent SQL injection
+        $searchTerm = isset($_POST['searchTerm']) ? $this->database->escape($_POST['searchTerm']) : '';
                 $searchTerm = $this->database->escape($searchTerm);
-                $pokemon = $this->database->query('SELECT * FROM pokemon WHERE nombre LIKE "%' . $searchTerm . '%"');
+                $pokemon = $this->database->query('SELECT * FROM pokemon WHERE nombre LIKE "%' . $searchTerm . '%" OR tipo1 LIKE "%' . $searchTerm . '%" OR tipo2 LIKE "%' . $searchTerm . '%"');
                 return $pokemon;
             }
 }
