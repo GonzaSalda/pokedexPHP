@@ -9,7 +9,7 @@ class LoginController {
         $this->loginModel = $loginModel;
     }
 
-    public function handleLogin() {
+    public function Login() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['usuario']) && isset($_POST['password'])) {
                 $username = $_POST['usuario'];
@@ -18,9 +18,7 @@ class LoginController {
                     $_SESSION['usuario'] = $username;
                     header('Location: index.php');
                     exit();
-                } else {
-                    echo 'Credenciales inválidas';
-                }
+                } 
             }
         }
     }

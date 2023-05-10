@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $pokemonsView = $configuration->getPokemonsController();
     $pokemonsView->list();
 }
-$pokemonsView = $configuration->getLoginController();
-$pokemonsView->handleLogin();
+$usuarioView = $configuration->getLoginController();
+$usuarioView->Login();
 
-$pokemonsView->logout();
+$usuarioView->logout();
 
 
 
