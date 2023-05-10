@@ -13,7 +13,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <div class='pb-4 m-2'>
     <div class='flex flex-col  lg:flex-row items-center lg:justify-between '>
         <img src="../public/pokeheader.jpg" class="max-w-full w-44 h-32 lg:w-56 lg:w-44" alt="">
-        <a href='../index.php' class='text-6xl mb-6 lg:mb-0 lg:text-4xl font-bold text-red-300'>Pokedex</a>
+        <a href='/Pokedex/index.php' class='text-6xl mb-6 lg:mb-0 lg:text-4xl font-bold text-red-300'>Pokedex</a>
         <form class="text-white text-xl" method="post">
         <?php if (isset($_SESSION['usuario'])) { ?>
                 <input type="hidden" name="action" value="logout">

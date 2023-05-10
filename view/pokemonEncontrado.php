@@ -9,10 +9,10 @@
     <div class="bg-red-100 h-auto rounded-2xl m-8 lg:p-24">
         <div class='flex gap-5 flex-col lg:flex-row'>
             <?php
-            if (empty($pokemons)) {
+            if (empty($data["pokemons"])) {
                 echo "<p>No se encontró ningún pokemon.</p>";
             } else {
-            foreach ($pokemons as $pokemon) {
+            foreach ($data["pokemons"] as $pokemon) {
                 echo "
                         <div class='flex flex-col items-center border-8 border-red-300 p-10 rounded-2xl'>
                             <h1 class='text-2xl font-bold'>" . $pokemon['nombre'] . "</h1>

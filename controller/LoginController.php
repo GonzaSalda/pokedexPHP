@@ -4,9 +4,10 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 class LoginController {
     private $loginModel;
-
-    public function __construct(LoginModel $loginModel) {
+    private $view;
+    public function __construct(LoginModel $loginModel, $view) {
         $this->loginModel = $loginModel;
+        $this->view= $view;
     }
 
     public function Login() {
@@ -18,7 +19,7 @@ class LoginController {
                     $_SESSION['usuario'] = $username;
                     header('Location: index.php');
                     exit();
-                } 
+                }
             }
         }
     }
