@@ -3,11 +3,9 @@ include_once('helpers/MySqlDatabase.php');
 include_once('helpers/View.php');
 include_once ('helpers/Router.php');
 
-include_once('model/PokemonsModel.php');
-include_once('model/LoginModel.php');
+include_once('model/UserModel.php');
 
-include_once('controller/PokemonsController.php');
-include_once('controller/LoginController.php');
+include_once('controller/UserController.php');
 class Configuration {
     private $configFile = 'config/config.ini';
 
@@ -28,31 +26,24 @@ class Configuration {
             $config['database']);
 
     }
-    public function getRenderer() {
-        return new View(); // Retorna una instancia de View
+    public function getRenderer() { // Retorna una instancia de View
+        return new View();
     }
-    public function getPokemonsController() {
+    public function getUserController() {
         $database = $this->getDatabase();
-        $pokemonsModel = new PokemonsModel($database);
-        // return new PokemonsController($pokemonsModel);
+        $userModel = new UserModel($database);
         $renderer = $this->getRenderer();
-        return new PokemonsController($pokemonsModel, $renderer); //los controladores podrán llamar al método render()
+        return new UserController($userModel, $renderer); //los controladores podrán llamar al método render()
                                                                   // de la instancia de View para
                                                                   //  renderizar una vista con los datos necesarios.
     }
 
-    public function getLoginController() {
-        $database = $this->getDatabase();
-        $loginModel = new LoginModel($database);
-        $renderer = $this->getRenderer();
-        return new LoginController($loginModel, $renderer);
-    }
-
     public function getRouter() {
-        return new Router($this, 'getPokemonsController', 'list');
+        return new Router($this, 'getUserController', 'crearUsuario');
     }
-    //la clase Configuration es una clase de utilidad que se utiliza para crear instancias de las
-    // clases necesarias para configurar la aplicación. En particular, utiliza
-    // una instancia de MySqlDatabase para crear instancias de los controladores y
-    // modelos necesarios para manejar los datos de la aplicación.
 }
+
+//la clase Configuration es una clase de utilidad que se utiliza para crear instancias de las
+// clases necesarias para configurar la aplicación. En particular, utiliza
+// una instancia de MySqlDatabase para crear instancias de los controladores y
+// modelos necesarios para manejar los datos de la aplicación.
