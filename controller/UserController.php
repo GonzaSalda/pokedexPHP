@@ -10,7 +10,7 @@ class UserController {
         $this->view= $view;
     }
 
-    public function crearUsuario() {
+    public function register() {
         $data = array(
             'nombre' => $_POST['nombre'],
             'fecha_nacimiento' => $_POST['fecha_nacimiento'],

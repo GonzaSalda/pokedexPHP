@@ -11,8 +11,8 @@ CREATE TABLE usuario (
                          ciudad VARCHAR(100) NOT NULL,
                          email VARCHAR(255) NOT NULL,
                          password VARCHAR(255) NOT NULL,
-                         username VARCHAR(255) NOT NULL,
-                        img_profile VARCHAR(255)
+                         username VARCHAR(255) NOT NULL UNIQUE,
+                         img_profile VARCHAR(255)
 );
 
 CREATE TABLE admin (

@@ -16,7 +16,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <body>
 <div class="mb-4 xl:mb-[30px]">
     <div class='bg-[#1C1919CC] bg-opacity-80 h-[122px] lg:h-[92px] flex justify-center items-center'>
-        <h1 class="font-[primary] not-italic text-[20px] lg:text-[35px] font-extrabold"><span class="text-[#E169E3]">KIRBY</span><span class="text-[#5990D2]">PREGUNTA</span></h1>
+        <h1 class="font-[primary] not-italic text-[20px] lg:text-[35px] font-extrabold"><span class="text-[#E169E3]">KIRBY </span><span class="text-[#5990D2]">PREGUNTA</span></h1>
     </div>
 </div>
 

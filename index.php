@@ -14,11 +14,11 @@
     include_once('view/body.php');
     include_once ('view/footer.php')
 ?>
+
 </div>
 
 
 <?php
-ob_start();
 include_once('Configuration.php');
 $configuration = new Configuration();
 $database = $configuration->getDatabase();
@@ -28,22 +28,7 @@ $router = $configuration->getRouter();
 
 
 $usuarioView = $configuration->getUserController();
-
-$action = isset($_GET['action']) ? $_GET['action'] : '';
-switch ($action) {
-    case 'register':
-        $usuarioView->crearUsuario();
-        break;
-    case 'login':
-        $usuarioView->login();
-        break;
-    case 'logout':
-        $usuarioView->logout();
-        break;
-    default:
-        break;
-}
-
+$usuarioView->register();
 
 
 

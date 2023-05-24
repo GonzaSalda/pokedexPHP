@@ -10,7 +10,7 @@
     <div class="border-2 border-gray-400 rounded-2xl  flex justify-center items-center flex-col overflow-hidden w-64 h-auto lg:w-full">
         <h2 class="text-lg lg:text-2xl font-semibold my-4">Registro de usuario</h2>
 
-            <form class="flex flex-col gap-2" action="../index.php?action=register" method="POST" enctype="multipart/form-data">
+            <form class="flex flex-col gap-2" action="./prueba.php?action=register" method="POST" enctype="multipart/form-data">
                 <input class="border-2 border-black rounded-xl p-2" type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
 
                 <input class="border-2 border-black rounded-xl p-2" type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha de nacimiento" required>

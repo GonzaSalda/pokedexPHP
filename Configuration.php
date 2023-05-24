@@ -39,7 +39,7 @@ class Configuration {
     }
 
     public function getRouter() {
-        return new Router($this, 'getUserController', 'crearUsuario');
+        return new Router($this, 'getUserController', 'register');
     }
 }
 
