@@ -11,7 +11,7 @@
     ?>
     <div class="flex justify-center items-center flex-col overflow-hidden">
         <div class="relative rounded-2xl p-6 bg-[#1C1919] bg-opacity-80  lg:w-[1137px] lg:h-[503px] flex justify-center items-center flex-col">
-           <img class="absolute top-0 -right-14 w-[130px] lg:w-[180px] h-[130px] lg:h-[180px]" src="../public/img/kirbyRegistro.png">
+           <img class="absolute top-0 -right-14 w-[130px] lg:w-[160px] h-[130px] lg:h-[160px]" src="../public/img/kirbyRegistro.png">
             <h2 class="pb-6 tracking-[0.12em] text-white font-semibold text-[20px] uppercase">Crear cuenta</h2>
             <form class="text-white font-light tracking-[0.06em] text-[15px]" action="../index.php" method="POST" enctype="multipart/form-data">
                 <div class="grid lg:grid-cols-2 gap-y-6 gap-x-24">
