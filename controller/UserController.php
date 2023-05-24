@@ -10,25 +10,26 @@ class UserController {
         $this->view= $view;
     }
 
-    public function register() {
-        $data = array(
-            'nombre' => $_POST['nombre'],
-            'fecha_nacimiento' => $_POST['fecha_nacimiento'],
-            'sexo' => $_POST['sexo'],
-            'pais' => $_POST['pais'],
-            'ciudad' => $_POST['ciudad'],
-            'email' => $_POST['email'],
-            'password' => $_POST['password'],
-            'username' => $_POST['username'],
-            'img_profile' => $_FILES['img_profile']['name'],
-         );
+    public function register()
+    {
+            $data = array(
+                'nombre' => $_POST['nombre'],
+                'fecha_nacimiento' => $_POST['fecha_nacimiento'],
+                'sexo' => $_POST['sexo'],
+                'pais' => $_POST['pais'],
+                'ciudad' => $_POST['ciudad'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password'],
+                'username' => $_POST['username'],
+                'img_profile' => $_FILES['img_profile']['name'],
 
-        $result = $this->userModel->crearUsuario($data);
-        if ($result) {
-            echo 'Registro exitoso. Se ha creado un nuevo usuario.';
-        } else {
-            echo 'Error al crear el usuario. Por favor, intenta nuevamente.';
-        }
+            );
+            $result = $this->userModel->crearUsuario($data);
+            if ($result) {
+                $this->view->render('./view/verificarMail.php', $result);
+            } else {
+                echo 'Error al crear el usuario. Por favor, intenta nuevamente.';
+            }
     }
 
     public function Login() {

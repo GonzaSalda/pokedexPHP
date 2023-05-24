@@ -13,8 +13,9 @@ CREATE TABLE usuario (
                          password VARCHAR(255) NOT NULL,
                          username VARCHAR(255) NOT NULL UNIQUE,
                          img_profile VARCHAR(255)
-);
 
+);
+DROP TABLE IF EXISTS `admin`;
 CREATE TABLE admin (
                          id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                          usuario VARCHAR(255),

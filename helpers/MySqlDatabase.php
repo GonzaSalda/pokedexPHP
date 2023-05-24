@@ -32,4 +32,4 @@ class MySqlDatabase extends mysqli {
     }
 }
 //La clase MySqlDatabase es responsable de establecer y cerrar la conexión con la base de datos MySQL,
-// y también proporciona un método para ejecutar consultas SQL en la base de datos.
+// y también proporciona un método para ejecutar consultas SQL en la base de datos. método para ejecutar consultas SQL en la base de datos.

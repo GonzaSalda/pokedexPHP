@@ -10,27 +10,30 @@
 <body>
 <div class="bg-[url('../public/img/mario.jpg')] bg-cover overflow-hidden">
 <?php
+ob_start();
     include_once('view/header.php');
     include_once('view/body.php');
     include_once ('view/footer.php')
 ?>
-
 </div>
 
 
 <?php
+
 include_once('Configuration.php');
 $configuration = new Configuration();
 $database = $configuration->getDatabase();
 $router = $configuration->getRouter();
 
 
-
-
 $usuarioView = $configuration->getUserController();
-$usuarioView->register();
 
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $module = $_GET['module'] ?? 'user';
+    $method = $_GET['action'] ?? 'register';
+    $router->route($module, $method);
+}
 
 
 
